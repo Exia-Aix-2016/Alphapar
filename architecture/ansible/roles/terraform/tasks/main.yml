@@ -3,5 +3,7 @@
     module: community.general.terraform
     project_path: "../terraform/"
     state: present
+    variables:
+      pm_password: "{{ pm.password }}"
 
 
