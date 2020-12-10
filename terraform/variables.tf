@@ -4,10 +4,7 @@ variable "pm_api_url" {
     description = "Access to proxmox's api"
 }
 
-variable "pm_user" {
-    default = "root@pam"
-    description = "user that will be used to connect to proxmox"
-}
+variable "pm_user" {}
 
 variable "pm_password" {}
 
