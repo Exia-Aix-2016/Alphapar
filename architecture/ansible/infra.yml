@@ -1,7 +1,11 @@
-- name: Install Keycloak
+- name: Deploy infrastructure
   hosts: localhost
-  remote_user: root
-
   roles:
     - terraform
+
+- name: Install Keycloak
+  hosts: keycloak
+  remote_user: root
+  roles:
+    - keycloak
   

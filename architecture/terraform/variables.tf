@@ -10,7 +10,7 @@ variable "pm_user" {
 }
 
 variable "pm_password" {
-    default = "P@ssw0rd"
+    default = ""
     description = "password"
     sensitive = true
 }
