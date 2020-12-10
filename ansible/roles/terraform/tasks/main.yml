@@ -4,7 +4,7 @@
     project_path: "../terraform/"
     state: present
     variables:
+      pm_api_url: "{{ pm.api_url }}"
+      pm_user: "{{ pm.user }}"
       pm_password: "{{ pm.password }}"
       sshkey: "{{ sshkey }}"
-
-
