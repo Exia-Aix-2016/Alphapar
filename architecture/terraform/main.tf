@@ -16,10 +16,12 @@ resource "proxmox_lxc" "service-keycloak" {
     }
     lifecycle { 
      ignore_changes = [
-                   network,
-                   target_node,
-     ]
-}
+            network,
+            target_node,
+        ]
+    }
+    ssh_public_keys = var.sshkey
+
 
 
     memory = 1024

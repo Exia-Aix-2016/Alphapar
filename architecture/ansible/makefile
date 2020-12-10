@@ -7,4 +7,4 @@ decrypt:
 	ansible-vault decrypt --vault-password-file .vault_pass vars/vault.yml
 
 deploy:
-	ansible-playbook --vault-password-file .vault_pass playbook.yml --ask-pass
+	ansible-playbook --vault-password-file .vault_pass playbook.yml

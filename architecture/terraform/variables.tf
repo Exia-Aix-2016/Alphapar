@@ -9,8 +9,7 @@ variable "pm_user" {
     description = "user that will be used to connect to proxmox"
 }
 
-variable "pm_password" {
-    default = ""
-    description = "password"
-    sensitive = true
-}
+variable "pm_password" {}
+
+
+variable "sshkey" {}

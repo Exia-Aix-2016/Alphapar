@@ -5,5 +5,6 @@
     state: present
     variables:
       pm_password: "{{ pm.password }}"
+      sshkey: "{{ sshkey }}"
 
 
