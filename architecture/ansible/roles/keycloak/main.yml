@@ -1,7 +1,0 @@
----
-- name: Install Keycloak
-  hosts: localhost
-  remote_user: root
-  
-  roles:
-    - terraform

@@ -1,0 +1,7 @@
+- name: "Create keycloak container"
+  local_action:
+    module: community.general.terraform
+    project_path: "../terraform/"
+    state: present
+
+
