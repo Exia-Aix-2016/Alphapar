@@ -4,7 +4,13 @@
     project_path: "../terraform/"
     state: present
     variables:
+      #PROXMOX
       pm_api_url: "{{ pm.api_url }}"
       pm_user: "{{ pm.user }}"
       pm_password: "{{ pm.password }}"
+      #SERVICES
       sshkey: "{{ sshkey }}"
+      kc_password: "{{ keycloak.password }}"
+      nc_password: "{{ nextcloud.password }}"
+      wb_password: "{{ web.password }}"
+      db_password: "{{ database.password }}"
