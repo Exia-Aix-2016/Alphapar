@@ -11,5 +11,6 @@
     - "vars/vault.yml"
   remote_user: root
   roles:
+    - runner
     - keycloak
   

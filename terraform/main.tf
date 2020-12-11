@@ -26,7 +26,7 @@ resource "proxmox_lxc" "service-keycloak" {
     memory = 1024
     ostemplate = "cephfs:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz"
     password = var.pm_password
- #  pool = "terraform"
+
     target_node = "hulk"
     unprivileged = true
 }

@@ -1,0 +1,7 @@
+- name: Start keycloak service
+  community.general.proxmox:
+    api_user: "{{ pm.user }}"
+    api_password: "{{ pm.password }}"
+    hostname: service-keycloak
+    state: started
+
