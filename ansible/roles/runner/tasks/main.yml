@@ -1,4 +1,4 @@
-- name: Start keycloak service
+- name: Start keycloak container
   community.general.proxmox:
     api_user: "{{ pm.user }}"
     api_password: "{{ pm.password }}"
