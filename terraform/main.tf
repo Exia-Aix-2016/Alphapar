@@ -1,10 +1,11 @@
 #===========================
 #             DOCKER
 #===========================
-resource "proxmox_vm_qemu" "docker1" {
+resource "proxmox_vm_qemu" "vm-docker" {
     clone = "docker-template"
-    name = "docker1"
-    target_node = "hulk"
+    for_each = toset(nodes)
+    name = "docker-${each.value}" 
+    target_node = each.value
     full_clone = true
     os_type = "cloud-init"
     cores = 2
