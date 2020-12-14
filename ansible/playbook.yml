@@ -4,13 +4,3 @@
     - "vars/vault.yml"
   roles:
     - terraform
-
-- name: Install Keycloak
-  hosts: keycloak
-  vars_files:
-    - "vars/vault.yml"
-  remote_user: root
-  roles:
-    - runner
-    - keycloak
-  
