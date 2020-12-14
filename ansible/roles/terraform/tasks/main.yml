@@ -11,6 +11,7 @@
       #MISCELLANEOUS
       sshkey: "{{ sshkey }}"
       nodes: "{{ nodes }}"
+      ci_password: "{{ cloudinit.password }}"
       #SERVICES
       
       

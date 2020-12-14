@@ -1,6 +1,7 @@
 #===========================
 #             DOCKER
 #===========================
+
 resource "proxmox_vm_qemu" "vm-docker" {
     clone = "docker-template"
     for_each = toset(nodes)
@@ -14,6 +15,13 @@ resource "proxmox_vm_qemu" "vm-docker" {
     memory = 4096
     scsihw = "virtio-scsi-pci"
     bootdisk = "scsi0"
+    
+    #USER MANAGEMENT
+    ciuser = "${each.value}"
+    cipassword = "{{ ci_password }}"
+    sshkeys = "{{ sshkey }}"
+    
+
     disk {
         size = "100G"
         type = "scsi"

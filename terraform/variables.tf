@@ -16,7 +16,7 @@ variable "pm_password" {
 }
 
 #===========================
-#      SERVICE SSHKEY
+#      MISCELLANEOUS
 #===========================
 
 variable "sshkey" {
@@ -24,5 +24,8 @@ variable "sshkey" {
 }
 
 variable "nodes" {
+    sensitive = true
+}
+variable "ci_password" {
     sensitive = true
 }
