@@ -1,2 +1,7 @@
-[keycloak]
-service-keycloak
+[dockervms]
+docker-hulk
+docker-ironman
+docker-thor
+
+[dockervms:vars]
+ansible_user = dockeradmin

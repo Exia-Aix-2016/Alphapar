@@ -1,6 +1,14 @@
-- name: Deploy infrastructure
-  hosts: localhost
+# - name: Deploy infrastructure
+#   hosts: localhost
+#   vars_files:
+#     - "vars/vault.yml"
+#   roles:
+#     - terraform
+
+- name: Install docker
+  hosts: dockervms
+  become: true
   vars_files:
     - "vars/vault.yml"
   roles:
-    - terraform
+    - nickjj.docker

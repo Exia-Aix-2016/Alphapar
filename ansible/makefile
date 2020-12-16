@@ -1,5 +1,6 @@
 install:
 	ansible-galaxy collection install -r requirements.yml 
+	ansible-galaxy install -r requirements.yml
 encrypt:
 	ansible-vault encrypt --vault-password-file .vault_pass vars/vault.yml
 
