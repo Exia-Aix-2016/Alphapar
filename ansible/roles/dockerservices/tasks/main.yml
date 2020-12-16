@@ -1,0 +1,17 @@
+- name: pip install docker
+  pip:
+    name: 
+      - docker
+      - docker-compose
+
+
+- name: Deploy Keycloak
+  community.general.docker_container:
+    name: keycloak
+    image: quay.io/keycloak/keycloak:latest
+    env:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: "{{ keycloak.password }}"
+    
+
+    

@@ -5,10 +5,18 @@
 #   roles:
 #     - terraform
 
-- name: Install docker
-  hosts: dockervms
+# - name: Install docker
+#   hosts: dockervms
+#   become: true
+#   vars_files:
+#     - "vars/vault.yml"
+#   roles:
+#     - nickjj.docker
+
+- name: Deploy Service
+  hosts: swarmmanager
   become: true
   vars_files:
     - "vars/vault.yml"
   roles:
-    - nickjj.docker
+    - dockerservices

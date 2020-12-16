@@ -5,3 +5,6 @@ docker-thor
 
 [dockervms:vars]
 ansible_user = dockeradmin
+
+[swarmmanager]
+docker-thor
